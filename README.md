@@ -108,10 +108,10 @@ By the end of this project, you’ll understand how to:
 
 ## 📷 Architecture Diagram
 
-*(Insert your architectural diagram here, if available)*
+*(architectural diagram here, )*
 
 ---
 
 ## 📬 Contact
 
-For questions or collaboration opportunities, feel free to connect via [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN-ID) or email at you@example.com.
+For questions or collaboration opportunities, feel free to connect via [LinkedIn](https://www.linkedin.com/in/etinosa-imafidon/) or email at etinosahendrix@yahoo.com.
