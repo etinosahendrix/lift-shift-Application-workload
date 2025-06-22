@@ -20,7 +20,7 @@ By the end of this project, you’ll understand how to:
 | Service                | Purpose                                                             |
 |------------------------|----------------------------------------------------------------------|
 | **EC2**                | Hosts Tomcat, MySQL, RabbitMQ, and Memcached services               |
-| **Elastic Load Balancer (ALB)** | Distributes incoming traffic and handles HTTPS via ACM        |
+| **Elastic Load Balancer (ELB)** | Distributes incoming traffic and handles HTTPS via ACM        |
 | **Auto Scaling Groups**| Manages horizontal scaling of Tomcat EC2 instances                  |
 | **S3**                 | Stores application artifacts and binaries                           |
 | **Route 53 (Private Hosted Zone)** | Provides internal DNS resolution for backend components   |
@@ -33,8 +33,8 @@ By the end of this project, you’ll understand how to:
 ## 🧱 Architecture Design
 
 ### 📡 Entry Point
-- End-users access the application via a DNS entry hosted on **GoDaddy**, which points to the **Application Load Balancer (ALB)**.
-- ALB routes HTTPS traffic to EC2 instances running **Apache Tomcat**.
+- End-users access the application via a DNS entry hosted on **GoDaddy**, which points to the **Application Load Balancer (ELB)**.
+- ELB routes HTTPS traffic to EC2 instances running **Apache Tomcat**.
 
 ### 🛠 Application Layer
 - Tomcat servers are part of an **Auto Scaling Group** to ensure elasticity based on demand.
@@ -49,8 +49,8 @@ By the end of this project, you’ll understand how to:
 
 ### 🔐 Security
 - Security Groups are segmented by roles:
-  - **ALB Security Group**: Allows HTTPS traffic only.
-  - **Tomcat SG**: Allows port 8080 traffic only from ALB.
+  - **ELB Security Group**: Allows HTTPS traffic only.
+  - **Tomcat SG**: Allows port 8080 traffic only from ELB.
   - **Backend SG**: Allows only required ports from Tomcat SG.
 
 ---
@@ -59,7 +59,7 @@ By the end of this project, you’ll understand how to:
 
 1. **Login to AWS**
 2. **Generate Key Pairs** for SSH access to instances
-3. **Create Security Groups** for ALB, Tomcat, and backend servers
+3. **Create Security Groups** for ELB, Tomcat, and backend servers
 4. **Launch EC2 Instances** with User Data (Bash scripts)
 5. **Configure Route 53** with IP-to-Hostname mapping
 6. **Build Application Locally** and upload artifact to **S3**
