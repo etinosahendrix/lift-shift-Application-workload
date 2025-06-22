@@ -114,4 +114,4 @@ By the end of this project, you’ll understand how to:
 
 ## 📬 Contact
 
-For questions or collaboration opportunities, feel free to connect via [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN-ID) or email at you@example.com.
+For questions or collaboration opportunities, feel free to connect via [LinkedIn](linkedin.com/in/etinosa-imafidon/) or email at etinosahendrix@yahoo.com.
